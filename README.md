@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Mudrekh/bull-qm.svg?branch=master)](https://travis-ci.org/Mudrekh/bull-qm) [![Coverage Status](https://coveralls.io/repos/github/Mudrekh/bull-qm/badge.svg?branch=master)](https://coveralls.io/github/Mudrekh/bull-qm?branch=master) 
 
-#Queue Manager for Bull
+# Queue Manager for Bull
 
 If you use Bull, you've probably run into a situation in which the number of connections to your redis server
 skyrocketed. Why? Because each instance of your queues created 3 connections and each instance of your application
@@ -143,4 +143,6 @@ syntactically, you can use that function to denote creation.
 | options | <code>Object</code> | Options to pass to bull. Options here will override any options provided by default. |
 
 
-&copy; 2020 Mudrekh Goderya
+# License
+
+&copy; 2020 Mudrekh Goderya MIT
