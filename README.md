@@ -4,7 +4,7 @@
 
 If you use Bull, you've probably run into a situation in which the number of connections to your redis server
 skyrocketed. Why? Because each instance of your queues created 3 connections and each instance of your application
-created each queue. Easily racking up thousands of connection. 
+created each queue. Easily racking up thousands of connections. 
 
 Enter the Queue Manager. At least now you can limit the number of connections a single instance makes!
 
