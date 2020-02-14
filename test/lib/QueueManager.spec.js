@@ -18,9 +18,10 @@ describe('QueueManager', () => {
 
   let client;
   let NUM_STARTING_CONNECTIONS_REDIS;
-  const QM = new QueueManager(BULL);
+  let QM;
 
   before(async () => {
+    QM = new QueueManager(BULL);
     client = new Redis(BULL.redis);
     NUM_STARTING_CONNECTIONS_REDIS = await getNumberOfRedisClients();
   });
@@ -81,6 +82,13 @@ describe('QueueManager', () => {
     });
     it('should be able to shutdown', async () => {
       await QM.shutdown();
+    });
+  });
+
+  describe('with no config', () => {
+    it('should default to an empty object (default redis/bull)', () => {
+      const tmpQM = new QueueManager();
+      tmpQM.createQueue('abc123').process(() => debug);
     });
   });
 });
