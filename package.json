@@ -1,0 +1,34 @@
+{
+  "name": "bull-qm",
+  "description": "Queue Manager for Bull",
+  "version": "0.0.1",
+  "author": "Mudrekh Goderya",
+  "scripts": {
+    "lint": "eslint lib test *.js",
+    "test": "mocha",
+    "coveralls": "nyc cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --exit -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "dependencies": {
+    "bull": "^3.x.x",
+    "debug": "^4.1.1",
+    "ioredis": "^4.x.x",
+    "lodash": "^4.17.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:PetroCloud/bull-qm.git"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "coveralls": "^3.0.9",
+    "eslint": "^4.19.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "mocha": "7.0.1",
+    "nyc": "15.0.0",
+    "sinon": "8.1.1",
+    "sinon-as-promised": "4.0.3",
+    "sinon-chai": "3.4.0"
+  }, 
+  "license": "MIT"
+}

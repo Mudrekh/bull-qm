@@ -1,0 +1,8 @@
+syntax: glob
+node_modules
+config/local.js
+npm-debug.log
+nbproject
+.idea
+.nyc_output
+coverage

@@ -1,0 +1,25 @@
+language: node_js
+
+sudo: false
+
+cache:
+  yarn: true
+
+# test on node.js versions
+node_js:
+  - '12'
+  - '10'
+  - '8'
+
+services:
+  - redis-server
+
+install:
+  # ensure unexpected changes to yarn.lock break the build
+  - npm install
+
+script:
+  - npm run test
+
+after_script:
+  - npm run coveralls
