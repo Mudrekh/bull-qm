@@ -1,7 +1,7 @@
 {
   "name": "bull-qm",
   "description": "Queue Manager for Bull",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Mudrekh Goderya",
   "scripts": {
     "preversion": "npm run readme",
