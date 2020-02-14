@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint lib test *.js",
     "test": "nyc mocha",
-    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "readme": "jsdoc2md --template README.hbs --files ./lib/QueueManager.js > README.md"
   },
   "dependencies": {
     "bull": "^3.x.x",
@@ -24,11 +25,12 @@
     "coveralls": "^3.0.9",
     "eslint": "^4.19.1",
     "eslint-plugin-chai-friendly": "^0.4.1",
+    "jsdoc-to-markdown": "^5.0.3",
     "mocha": "7.0.1",
     "nyc": "15.0.0",
     "sinon": "8.1.1",
     "sinon-as-promised": "4.0.3",
     "sinon-chai": "3.4.0"
-  }, 
+  },
   "license": "MIT"
 }

@@ -77,8 +77,9 @@ describe('QueueManager', () => {
     it('should be able to get all queues', () => {
       QM.getAllQueues().should.have.length(4);
     });
-    it('should be able to add a job to a queue', () => {
-      QM.enqueue('a', { test: 'hello' });
+    it('should be able to add a job to a queue', async () => {
+      const job = await QM.enqueue('a', { test: 'hello' });
+      job.should.have.property('id');
     });
     it('should be able to shutdown', async () => {
       await QM.shutdown();
