@@ -30,7 +30,6 @@
     "mocha": "7.0.1",
     "nyc": "15.0.0",
     "sinon": "8.1.1",
-    "sinon-as-promised": "4.0.3",
     "sinon-chai": "3.4.0"
   },
   "license": "MIT",
