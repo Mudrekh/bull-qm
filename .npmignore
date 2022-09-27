@@ -1,0 +1,9 @@
+test/*
+.eslint*
+.gitignore
+.mocharc.js
+.nvmrc
+.nyc*
+.travis.yml
+README_TEMPLATE*
+coverage*

@@ -8,7 +8,7 @@
     "lint": "eslint lib test *.js",
     "test": "nyc mocha",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "readme": "jsdoc2md --template README.hbs --files ./lib/QueueManager.js > README.md"
+    "readme": "jsdoc2md --template README_TEMPLATE.hbs --files ./lib/QueueManager.js > README.md"
   },
   "dependencies": {
     "bull": "^4.9.0",
