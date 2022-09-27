@@ -6,9 +6,8 @@ cache: npm
 
 # test on node.js versions
 node_js:
-  - '12'
-  - '10'
-  - '8'
+  - '16'
+  - '14'
 
 services:
   - redis-server
