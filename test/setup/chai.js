@@ -5,4 +5,4 @@ global.expect = global.chai.expect;
 global.sinon = require('sinon');
 
 const chaiplugins = ['chai-as-promised', 'sinon-chai'];
-chaiplugins.forEach(plugin => chai.use(require(plugin))); // eslint-disable-line
+chaiplugins.forEach(plugin => chai.use(require(plugin))); // eslint-disable-line global-require
