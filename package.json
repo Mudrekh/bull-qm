@@ -11,10 +11,10 @@
     "readme": "jsdoc2md --template README.hbs --files ./lib/QueueManager.js > README.md"
   },
   "dependencies": {
-    "bull": "^3.x.x",
-    "debug": "^4.1.1",
-    "ioredis": "^4.x.x",
-    "lodash": "^4.17.15"
+    "bull": "^4.9.0",
+    "debug": "^4.3.4",
+    "ioredis": "^4.28.5",
+    "lodash": "^4.17.21"
   },
   "repository": {
     "type": "git",
