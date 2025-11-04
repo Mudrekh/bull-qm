@@ -26,7 +26,7 @@ QueueManager
     * [.getQueue(name, options)](#QueueManager+getQueue) ⇒ <code>BullQueue</code>
     * [.getAllQueues()](#QueueManager+getAllQueues) ⇒ <code>Array.&lt;BullQueue&gt;</code>
     * [.shutdown()](#QueueManager+shutdown) ⇒ <code>Promise</code>
-    * [.createClient(type, redisOpts)](#QueueManager+createClient) ⇒ <code>IORedis</code>
+    * [.createClient(type, redisOpts, extraOpts)](#QueueManager+createClient) ⇒ <code>IORedis</code>
     * [.createQueue(name, options)](#QueueManager+createQueue) ⇒ <code>BullQueue</code>
     * [.createQueue(name, options)](#QueueManager+createQueue) ⇒ <code>BullQueue</code>
 
@@ -117,7 +117,7 @@ Closes all queues managed by this QueueManager
 **Returns**: <code>Promise</code> - Resolves when all queues have been closed  
 <a name="QueueManager+createClient"></a>
 
-### manager.createClient(type, redisOpts) ⇒ <code>IORedis</code>
+### manager.createClient(type, redisOpts, extraOpts) ⇒ <code>IORedis</code>
 Manages the clients used by queues in this QueueManager instance. Bull can reuse subscriber and client
 connections, but needs to create separate bclient instances for each queue. This means that the number of clients
 you have is directly tied to the number of queues you have. You shouldn't have to use the function unless you
@@ -131,6 +131,7 @@ want to reuse the IORedis connection that the Queue Manager is using
 | --- | --- | --- |
 | type | <code>string</code> | Type of redis client |
 | redisOpts | <code>IORedisOpts</code> | The options to pass to redis. |
+| extraOpts | <code>Object</code> | Additional options, e.g. `maxListeners` (defaults to 0). |
 
 <a name="QueueManager+createQueue"></a>
 
