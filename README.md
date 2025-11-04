@@ -27,8 +27,6 @@ QueueManager
     * [.getAllQueues()](#QueueManager+getAllQueues) ⇒ <code>Array.&lt;BullQueue&gt;</code>
     * [.shutdown()](#QueueManager+shutdown) ⇒ <code>Promise</code>
     * [.createClient(type, redisOpts, extraOpts)](#QueueManager+createClient) ⇒ <code>IORedis</code>
-    * [.createQueue(name, options)](#QueueManager+createQueue) ⇒ <code>BullQueue</code>
-    * [.createQueue(name, options)](#QueueManager+createQueue) ⇒ <code>BullQueue</code>
 
 <a name="new_QueueManager_new"></a>
 
@@ -132,36 +130,6 @@ want to reuse the IORedis connection that the Queue Manager is using
 | type | <code>string</code> | Type of redis client |
 | redisOpts | <code>IORedisOpts</code> | The options to pass to redis. |
 | extraOpts | <code>Object</code> | Additional options, e.g. `maxListeners` (defaults to 0). |
-
-<a name="QueueManager+createQueue"></a>
-
-### manager.createQueue(name, options) ⇒ <code>BullQueue</code>
-Gets a specific queue. Creates it if the queue does not exist. If a queue needs special configuration options,
-they can be called on the first instance of getQueue. QueueManager.createQueue is aliased to this function, so
-syntactically, you can use that function to denote creation.
-
-**Kind**: instance method of [<code>QueueManager</code>](#QueueManager)  
-**Returns**: <code>BullQueue</code> - The created bull queue  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | The name of the queue to create |
-| options | <code>BullOpts</code> | Options to pass to bull. Options here will override any options provided by default. |
-
-<a name="QueueManager+createQueue"></a>
-
-### manager.createQueue(name, options) ⇒ <code>BullQueue</code>
-Gets a specific queue. Creates it if the queue does not exist. If a queue needs special configuration options,
-they can be called on the first instance of getQueue. QueueManager.createQueue is aliased to this function, so
-syntactically, you can use that function to denote creation.
-
-**Kind**: instance method of [<code>QueueManager</code>](#QueueManager)  
-**Returns**: <code>BullQueue</code> - The created bull queue  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | The name of the queue to create |
-| options | <code>BullOpts</code> | Options to pass to bull. Options here will override any options provided by default. |
 
 
 # License
